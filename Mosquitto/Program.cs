@@ -28,10 +28,19 @@ namespace Mosquitto
                 {
                     Console.WriteLine("Nu är lampan släckt");
                 }
+                if (message == "explode lamp")
+                {
+                    Console.WriteLine("Lampan sprängdes");
+                }
+                // Fel hantering
+                else
+                {
+                    Console.WriteLine("Fel inmatning (Försök igen)!");
+                }
 
 
 
-                return Task.CompletedTask;
+                    return Task.CompletedTask;
             };
 
             // Hanterar vad som ska ske vid anslutning
